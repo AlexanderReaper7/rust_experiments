@@ -1,15 +1,21 @@
 [package]
 name = "rust_multithread"
+author = "Alexander Öberg <stativetroller7@gmail.com>"
 version = "0.1.0"
 edition = "2021"
+publish = false
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 rayon = "1.5.1"
+spriv-std = "0.1.0"
+cached = "0.26.2"
+
 
 [dev-dependencies]
-criterion = "0.3.5"
+criterion = "0.3.*"
+gnuplot = "*"
 
 [[bench]]
 name = "main_benchmark"
