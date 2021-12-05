@@ -1,6 +1,8 @@
+[workspace]
+
 [package]
-name = "rust_multithread"
-author = "Alexander Öberg <stativetroller7@gmail.com>"
+name = "rust_experiments"
+authors = ["Alexander Öberg <stativetroller7@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
 publish = false
@@ -9,12 +11,10 @@ publish = false
 
 [dependencies]
 rayon = "1.5.1"
-cached = "0.26.2"
 
 
 [dev-dependencies]
 criterion = "0.3.5"
-gnuplot = "0.0.37"
 
 [[bench]]
 name = "main_benchmark"

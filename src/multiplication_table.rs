@@ -21,7 +21,7 @@ pub mod generation {
             table
         }
         thread_local!(
-        /// The cache for the `generate_multiplication_table_cached` function.
+            /// The cache for the `generate_multiplication_table_cached` function.
             static CACHED_TABLE: RefCell<Vec<Vec<u32>>> = RefCell::new(Vec::new())
         );
         /// Generates a multiplication table with sides of `n` length using a unique in-memory cacheing approach.
@@ -56,7 +56,7 @@ pub mod generation {
         }
 
         /// Generates a multiplication table with sides of `n` length using the rayon crate for parallelism.
-        pub fn generate_multiplication_table_async(n: u32) -> Vec<Vec<u32>> {
+        pub fn generate_multiplication_table_par(n: u32) -> Vec<Vec<u32>> {
             let mut table: Vec<Vec<u32>> = Vec::with_capacity(n as usize);
             (1..n+1).into_par_iter().map(|i| {
                 let mut inner_table = Vec::with_capacity(n as usize);
@@ -72,7 +72,7 @@ pub mod generation {
             if n < SMART_CUTOFF {
                 generate_multiplication_table(n)
             } else {
-                generate_multiplication_table_async(n)
+                generate_multiplication_table_par(n)
             }
         }
 
@@ -184,8 +184,8 @@ mod test {
             } 
         }
         #[test]
-        fn test_generate_multiplication_table_async() {
-            test_helper_generate_table(generate_multiplication_table_async);
+        fn test_generate_multiplication_table_par() {
+            test_helper_generate_table(generate_multiplication_table_par);
         }
         #[test]
         fn test_generate_multiplication_table_smart() {
