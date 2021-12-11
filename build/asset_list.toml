@@ -1,0 +1,12 @@
+# list of asset names and paths relative to the assets folder to include in the build as byte arrays using the include_bytes! macro.
+[[asset]]
+name = "EMBEDED_FILE"
+path = "embededfile.txt"
+description = "an example embeded file"
+[[asset]]
+name = "EMBEDED_FILE2"
+path = "another_file.txt"
+[[asset]]
+name = "ICON"
+path = "icon.ico"
+description = "the icon for the application"

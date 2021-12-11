@@ -1,0 +1,13 @@
+This is a text file for testing embedding a file right into the executable binary and then unpacking it again on runtime.
+
+It could be interesting to try and compress the file before embedding and decomress on unpacking
+
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
+update! it works! might add some more optional features like optional output pathname

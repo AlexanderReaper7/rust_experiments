@@ -1,7 +1,6 @@
 #![allow(dead_code)]
 //! This module contains the code for the multiplication table.
 //! Its purpose is to experiment with different ways of optimizing a simple function and learning rust.
-extern crate rayon;
 
 pub mod generation {
     pub mod two_d {

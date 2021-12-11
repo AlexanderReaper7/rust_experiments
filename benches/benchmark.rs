@@ -48,8 +48,6 @@ pub fn multiplication_table_generation(c: &mut Criterion) {
     group.finish();
 }
 
-#[path = "../src/storage.rs"] mod storage;
-use storage::*;
 // TODO: benchmark storage
 
 criterion_group!(benches, multiplication_table_generation);
