@@ -1,9 +1,9 @@
 //! Contains all the assets. 
-//! Auto generated on 2021-12-11 19:39:53.576029800 UTC
+//! Auto generated on 2022-01-24 00:55:48.768202300 UTC
 
 /// an example embeded file
 pub static EMBEDED_FILE: &'static [u8] = include_bytes!("../build/assets/embededfile.txt.zst");
-pub static EMBEDED_FILE2: &'static [u8] = include_bytes!("../build/assets/another_file.txt.zst");
+pub static SECOND_EMBEDED_FILE: &'static [u8] = include_bytes!("../build/assets/another_file.txt.zst");
 /// the icon for the application
 pub static ICON: &'static [u8] = include_bytes!("../build/assets/icon.ico.zst");
 

@@ -39,7 +39,6 @@ const COMPRESSION_LEVEL: i32 = 19;
 
 fn proccess_assets() {
     // parse assets list
-    println!("cargo:warning=Parsing assets list {}", std::env::current_dir().unwrap().display());
     let include_list = include_str!("asset_list.toml");
     let include_list: Assets = toml::from_str(include_list).unwrap();
 
