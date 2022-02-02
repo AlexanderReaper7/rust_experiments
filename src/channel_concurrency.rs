@@ -1,7 +1,7 @@
 //! A test for multi threading with one consumer and one producer.
 //! The producer will produce some item and will send it to the consumer at a diffrent thread.
 
-use std::{sync::mpsc::{channel, Sender, Receiver}, thread};
+use std::{sync::mpsc::{channel, Receiver}, thread};
 
 pub struct App {
     receiver: Receiver<i32>,

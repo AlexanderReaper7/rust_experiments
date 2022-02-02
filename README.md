@@ -8,5 +8,7 @@ This project provides a place to experiment and learn about all things concernin
 - basic optimization of single/mutithreded functions
 - benchmarking with the criterion library (though i already learned this from https://github.com/AlexanderReaper7/mine_sweeper)
 - build scripts
+- basic concurrrency using channels
+- basic hasing function usage and benchmarking
 ## Still working on:
 - embedding an icon into the executable

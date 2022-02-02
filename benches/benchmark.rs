@@ -48,7 +48,25 @@ pub fn multiplication_table_generation(c: &mut Criterion) {
     group.finish();
 }
 
-// TODO: benchmark storage
+const TEST_FILE: &[u8] = include_bytes!("../assets/test.png");
+pub fn hashes(c: &mut Criterion) {
 
-criterion_group!(benches, multiplication_table_generation);
+    let mut group = c.benchmark_group("hashes");
+    group.bench_function("xxh3", |b| {
+        b.iter(|| {
+            xxhash_rust::xxh3::xxh3_64(TEST_FILE);
+        })
+    });
+    let hash = xxhash_rust::xxh3::xxh3_64(TEST_FILE);
+    println!("xxh3_64: {hash:16x}");
+    group.bench_function("crc32fast", |b| {
+        b.iter(|| {
+            crc32fast::hash(TEST_FILE);
+        })
+    });
+    let hash = crc32fast::hash(TEST_FILE);
+    println!("CRC32: {hash:8x}");
+}
+
+criterion_group!(benches, multiplication_table_generation, hashes);
 criterion_main!(benches);
