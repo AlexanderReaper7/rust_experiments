@@ -1,6 +1,6 @@
 [package]
 name = "rust_experiments"
-authors = ["Alexander Öberg <stativetroller7@gmail.com>"]
+authors = ["Alexander Öberg"]
 version = "0.1.0"
 edition = "2021"
 publish = false
@@ -16,26 +16,28 @@ name = "rust_experiments"
 path = "src/main.rs"
 
 [dependencies]
-rayon = "1.5.1"
-zstd = "0.10.0"
+rayon = "1.10.0"
+zstd = "0.13.3"
 scrap = "0.5.0"
-crossterm = "0.22.1"
-crc32fast = "1.3.1"
-xxhash-rust = {version = "0.8.2", features = ["xxh3"]}
+crossterm = "0.28.1"
+crc32fast = "1.4.2"
+xxhash-rust = {version = "0.8.15", features = ["xxh3"]}
+tui = "0.19.0"
+rand = "0.9.0"
 
 [dev-dependencies]
-criterion = "0.3.5"
+criterion = "0.5.1"
 
 [target.'cfg(windows)'.build-dependencies]
 winres = "0.1.12"
 
 [build-dependencies]
-zstd = "0.10.0"
-toml = "0.5.8"
-serde = { version = "1.0.131", features = ["derive"] }
-chrono = "0.4.19"
-crc32fast = "1.3.1"
-xxhash-rust = {version = "0.8.2", features = ["xxh3"]}
+zstd = "0.13.3"
+toml = "0.8.20"
+serde = { version = "1.0.219", features = ["derive"] }
+chrono = "0.4.40"
+crc32fast = "1.4.2"
+xxhash-rust = {version = "0.8.15", features = ["xxh3"]}
 
 [[bench]]
 name = "benchmark"

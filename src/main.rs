@@ -10,13 +10,22 @@ fn main() {
     // println!("starting screen capture test");
     // screen_capture::run_speed_test(100);
 
-    println!("starting hashing test");
-    hashing::run();
+    // println!("starting hashing test");
+    // hashing::run();
+
+    // println!("starting tui test");
+    // terminal_ui::main();
+
+    // println!("starting archon shard probability test");
+    // archon_shard_probability::main();
+
+    println!("starting beggar my neighbor test");
+    beggar_my_neighbor::main();
 
     pause_at_end()
 }
 
 fn pause_at_end() {
-    println!("press any key to continue...");
+    println!("press enter to continue...");
     std::io::stdin().read_line(&mut String::new()).unwrap();
 }
